@@ -11,6 +11,9 @@ a:visited{
     text-decoration:none;
     color:#000;
 }
+.txt-align{
+    text-align: right;
+}
 ul {
     list-style: none;
 }
@@ -37,6 +40,10 @@ ul {
     clear: both;
     height: 0;
 }
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
 img {
     vertical-align: middle;
     max-width: 100%;
@@ -47,7 +54,7 @@ img {
     background: #fff;
 }
 .sec-1{
-    height: 600px;
+    height: auto;
 }
 /* ******** header page ********/
 .wrapper{
@@ -64,7 +71,7 @@ img {
 .header {
     z-index: 1;
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px 60px;
 }
 .menubar {
     display:  inline-block;
@@ -95,13 +102,13 @@ img {
     line-height: 1.15em;
     margin-bottom: 20px;
 }
-.row.sec-o-1 {
+.sec-o-1 {
     width: 100%;
     padding: 20px 50px;
 }
 
-img.img-banner {
-    padding-left:  111px;
+.img-banner {
+    /*padding-left:  111px;*/
 }
 .txt-content {
     padding-top: 80px;
@@ -110,7 +117,7 @@ img.img-banner {
     background: #e0003b;
     color: #fff;
 }
-a.btn-start {
+.btn-start {
     padding: 10px 60px 10px 30px;
     border-radius: 25px;
     background: transparent;
@@ -153,7 +160,7 @@ a.btn-start span {
     padding: 35px 100px 40px 70px;
     position:  absolute;
     left:  -60px;
-    top: 60px;
+    top: 75px;
     border-radius: 5px;
 }
 .studio-txt p {
@@ -281,6 +288,7 @@ ul.in-img li {
 .social a:hover {
     background: #fff;
     border: 1px solid white;
+    color: #df003a;
 }
 .footer-bottom {
     padding: 50px 0;
@@ -289,10 +297,13 @@ ul.in-img li {
 p.footer-txt.white {
     display: inline-block;
 }
-
+.social a{
+    color: #fff;
+}
 .social {
     display: inline-block;
     float: right;
+
 }
 
 .inner-social a {
@@ -314,6 +325,7 @@ p.footer-txt.white {
     top: 0;
     width:  100%;
     left: 5%;
+    padding-right: 68px;
 }
 
 .carousel-caption h2 {
@@ -321,11 +333,14 @@ p.footer-txt.white {
     font-weight:  bold;
 }
 div#myCarousel ol li {
-    width:  50px;
+    width: 30px;
     right: 0;
     display:  block;
     height:  6px;
     margin-bottom: 10px;
+}
+div#myCarousel ol li.active {
+    width: 50px;
 }
 
 .carousel-indicators {
@@ -358,6 +373,7 @@ div#myCarousel ol li {
 }
 .carousel-caption p {
     text-align:  left;
+    line-height: 1.6;
 }
 .address {
     margin-top: 30px;
@@ -387,16 +403,27 @@ section.section-gap.carousel-area {
     position: relative;
     overflow: hidden;
 }
+
+/* *****************media css ********************/
+@media (max-width: 1024px) {
+    .studio-txt {
+        top: 9px;
+    }
+
+}
 @media(max-width: 992px){}
 @media(max-width: 768px){
     .studio-txt {
         position: inherit;
         left: 0px;
     }
+    .social {
+        float: none;
+    }
     .item img {
         position: relative;
         top: 50%;
-        transform: translateY(55%);
+        transform: translateY(0%);
     }
     img.img-banner {
         padding-left: 0;
@@ -411,15 +438,30 @@ section.section-gap.carousel-area {
         right: 3%;
     }
 }
-@media (max-width: 734px){
-img.img-banner {
-    width: 50%;
-    float: right;
-}
+@media (max-width: 736px){
+    img.img-banner {
+        width: 50%;
+        float: right;
+    }
+    .carousel-indicators{
+        display: none;
+    }
+    .studio-img {
+        text-align: center;
+    }
 }
 @media(max-width: 420px){
     .txt-content h1 {
-        font-size: 20px;
+        font-size: 33px;
+    }
+    .wrapper{
+        margin: 10px;
+    }
+    .header {
+        padding: 20px 20px;
+    }
+    .sec-o-1 {
+        padding: 20px 20px;
     }
     img.img-banner {
         width: 100%;
@@ -437,18 +479,18 @@ img.img-banner {
         margin: 13px 0;
     }
     .sec-1 {
-        height: 660px;
+        /*height: 574px;*/
     }
     .studio-txt {
         background: #fff;
-        padding: 10px 10px;
+        padding: 20px 20px;
         position:inherit;
         left: 0px;
         top: 60px;
         border-radius: 5px;
     }
     .studio-txt h2 {
-        font-size: 20px;
+        font-size: 26px;
     }
 
     .studio-txt p {
@@ -462,12 +504,14 @@ img.img-banner {
     }
     .carousel-caption h5, p {
         font-size: 14px;
+        line-height: 1.6;
     }
     .carousel-caption h2 {
-        font-size: 20px;
+        font-size: 28px;
+        margin-bottom: 20px;
     }
     .carousel-caption {
-        margin-top: 100px;
+        margin-top: 22px;
     }
 
 
